@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tickets>
+  <Ticket>
+    <TicketID>PS006</TicketID>
+    <subject>How to set up two-factor authentication</subject>
+    <body>I want to enable two-factor authentication for my account to improve security. Where can I find this setting and what authentication methods are supported?</body>
+    <answer>Two-factor authentication can be enabled in Settings > Security > Two-Factor Authentication. We support three methods: 1) Authenticator apps (Google Authenticator, Authy), 2) SMS codes, and 3) Hardware security keys (YubiKey, etc.). We recommend using an authenticator app for the best security. After enabling, you'll receive backup codes - store these safely in case you lose access to your 2FA device.</answer>
+    <type>question</type>
+    <queue>product</queue>
+    <priority>low</priority>
+    <language>en</language>
+    <tag_1>security</tag_1>
+    <tag_2>2fa</tag_2>
+    <tag_3>authentication</tag_3>
+    <tag_4>account</tag_4>
+    <tag_5>settings</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>PS007</TicketID>
+    <subject>Custom branding not applying to emails</subject>
+    <body>I've uploaded our company logo and set custom colors in the branding settings, but the automated emails still show the default branding. I've waited 24 hours but no change. Our brand colors are important for customer recognition.</body>
+    <answer>Custom email branding requires the Premium or Enterprise plan. Your account is currently on the Professional plan which includes dashboard branding only. To enable custom email branding, upgrade to Premium plan or contact sales for Enterprise options. Alternatively, you can customize email templates using our API if you have development resources.</answer>
+    <type>question</type>
+    <queue>product</queue>
+    <priority>medium</priority>
+    <language>en</language>
+    <tag_1>branding</tag_1>
+    <tag_2>email</tag_2>
+    <tag_3>customization</tag_3>
+    <tag_4>plan-limits</tag_4>
+    <tag_5>upgrade</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>PS008</TicketID>
+    <subject>Search function returning irrelevant results</subject>
+    <body>The search feature in the product catalog is returning many irrelevant results. When I search for 'wireless mouse', I get results for keyboards, monitors, and other unrelated items. This makes it difficult for customers to find what they need.</body>
+    <answer>We identified an issue with the search algorithm's relevance scoring after the recent index update. Deployed a fix that improves keyword matching and boosts exact phrase matches. Also implemented search filters for category, price range, and brand to help narrow results. The search relevance has improved significantly - please test and provide feedback. We're also working on AI-powered semantic search for the next release.</answer>
+    <type>bug</type>
+    <queue>product</queue>
+    <priority>high</priority>
+    <language>en</language>
+    <tag_1>search</tag_1>
+    <tag_2>relevance</tag_2>
+    <tag_3>catalog</tag_3>
+    <tag_4>algorithm</tag_4>
+    <tag_5>user-experience</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>PS009</TicketID>
+    <subject>API documentation outdated</subject>
+    <body>The API documentation shows endpoints and parameters that don't match the actual API responses. Specifically, the /api/v2/users endpoint documentation is missing the new 'department' and 'role' fields that were added in the recent update.</body>
+    <answer>Updated API documentation to reflect all changes from v2.3 release. Added missing fields to endpoint documentation and included new examples. Also set up automated documentation generation from OpenAPI specs to prevent future discrepancies. Documentation now includes interactive API explorer for testing endpoints. All changes are live at docs.example.com/api.</answer>
+    <type>bug</type>
+    <queue>documentation</queue>
+    <priority>medium</priority>
+    <language>en</language>
+    <tag_1>api</tag_1>
+    <tag_2>documentation</tag_2>
+    <tag_3>outdated</tag_3>
+    <tag_4>developer</tag_4>
+    <tag_5>endpoints</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>PS010</TicketID>
+    <subject>Feature request: Dark mode for dashboard</subject>
+    <body>Many users including myself work late hours and would greatly benefit from a dark mode option for the dashboard. The current bright interface causes eye strain during extended use. This is a commonly requested feature in our user community.</body>
+    <answer>Great news! Dark mode is now available in beta. Enable it in Settings > Appearance > Theme > Dark Mode. We've implemented dark mode for the main dashboard, reports, and settings pages. Some third-party integrations may still show in light mode. We're gathering feedback to refine the color scheme and contrast ratios. Please report any readability issues you encounter.</answer>
+    <type>feature-request</type>
+    <queue>product</queue>
+    <priority>low</priority>
+    <language>en</language>
+    <tag_1>dark-mode</tag_1>
+    <tag_2>ui</tag_2>
+    <tag_3>feature-request</tag_3>
+    <tag_4>accessibility</tag_4>
+    <tag_5>theme</tag_5>
+    <tag_6>user-experience</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+</Tickets>

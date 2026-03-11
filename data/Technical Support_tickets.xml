@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tickets>
+  <Ticket>
+    <TicketID>TS006</TicketID>
+    <subject>Server memory usage at 95%</subject>
+    <body>Production server web-prod-01 is showing consistently high memory usage at 95%. Application performance is degraded and we're seeing occasional out-of-memory errors in the logs. This started after deploying the new analytics module yesterday.</body>
+    <answer>Identified memory leak in the analytics module's data aggregation function. The issue was caused by not properly releasing database connections in the connection pool. Applied patch v1.2.3 that fixes the connection leak. Restarted the application server and memory usage returned to normal levels (60-70%). Added memory monitoring alerts for early detection.</answer>
+    <type>incident</type>
+    <queue>infrastructure</queue>
+    <priority>critical</priority>
+    <language>en</language>
+    <tag_1>memory</tag_1>
+    <tag_2>server</tag_2>
+    <tag_3>performance</tag_3>
+    <tag_4>memory-leak</tag_4>
+    <tag_5>production</tag_5>
+    <tag_6>monitoring</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>TS007</TicketID>
+    <subject>Email notifications not being sent</subject>
+    <body>Users are reporting that they're not receiving email notifications for new messages and updates. The email service logs show 'SMTP connection timeout' errors. This affects all notification types including password resets.</body>
+    <answer>SMTP server IP address was blacklisted due to a compromised account sending spam. Worked with email provider to remove from blacklist. Implemented additional security measures: enabled SPF and DKIM records, added rate limiting on email sending, and set up monitoring for unusual email patterns. All notification emails are now being delivered successfully.</answer>
+    <type>incident</type>
+    <queue>email</queue>
+    <priority>high</priority>
+    <language>en</language>
+    <tag_1>email</tag_1>
+    <tag_2>smtp</tag_2>
+    <tag_3>notifications</tag_3>
+    <tag_4>blacklist</tag_4>
+    <tag_5>security</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>TS008</TicketID>
+    <subject>Implement automated security patching</subject>
+    <body>Need to set up automated security patching for all production servers to ensure timely application of critical security updates. Currently, patching is done manually which causes delays and inconsistencies.</body>
+    <answer>Implemented automated patching using Ansible playbooks scheduled via Jenkins. Created staging environment for patch testing before production deployment. Set up automated rollback mechanism in case of patch failures. Configured maintenance windows for Tuesday nights 2-4 AM. All servers now receive security patches within 48 hours of release.</answer>
+    <type>task</type>
+    <queue>security</queue>
+    <priority>medium</priority>
+    <language>en</language>
+    <tag_1>security</tag_1>
+    <tag_2>patching</tag_2>
+    <tag_3>automation</tag_3>
+    <tag_4>ansible</tag_4>
+    <tag_5>infrastructure</tag_5>
+    <tag_6>devops</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>TS009</TicketID>
+    <subject>CDN cache not invalidating properly</subject>
+    <body>After deploying new static assets (CSS, JS), users are still seeing old cached versions. CDN cache invalidation requests are returning success but changes aren't reflected. This is causing UI issues and broken functionality for users.</body>
+    <answer>Issue was with wildcard cache invalidation patterns not matching all asset paths. Updated invalidation script to use specific paths instead of wildcards. Also reduced CDN cache TTL from 24 hours to 4 hours for static assets. Implemented cache-busting using content hashes in filenames. Verified that new deployments now properly invalidate and update cached content.</answer>
+    <type>bug</type>
+    <queue>infrastructure</queue>
+    <priority>high</priority>
+    <language>en</language>
+    <tag_1>cdn</tag_1>
+    <tag_2>cache</tag_2>
+    <tag_3>deployment</tag_3>
+    <tag_4>static-assets</tag_4>
+    <tag_5>invalidation</tag_5>
+    <tag_6>nan</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+  <Ticket>
+    <TicketID>TS010</TicketID>
+    <subject>Kubernetes pods restarting frequently</subject>
+    <body>Multiple pods in the production Kubernetes cluster are restarting every 10-15 minutes. Logs show 'Liveness probe failed' errors. This is causing service interruptions and degraded performance.</body>
+    <answer>Liveness probe timeout was set too aggressively (2 seconds) for the application startup time. Increased liveness probe initial delay from 10s to 30s and timeout from 2s to 5s. Also optimized application startup by lazy-loading non-critical modules. Pod restarts have stopped and cluster stability has been restored. Updated deployment templates with new probe configurations.</answer>
+    <type>incident</type>
+    <queue>kubernetes</queue>
+    <priority>critical</priority>
+    <language>en</language>
+    <tag_1>kubernetes</tag_1>
+    <tag_2>pods</tag_2>
+    <tag_3>liveness-probe</tag_3>
+    <tag_4>restart</tag_4>
+    <tag_5>container</tag_5>
+    <tag_6>orchestration</tag_6>
+    <tag_7>nan</tag_7>
+    <tag_8>nan</tag_8>
+  </Ticket>
+</Tickets>
